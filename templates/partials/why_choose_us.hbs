@@ -1,0 +1,241 @@
+<!--Why Choose Us -->
+<div class="choose-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <img class="img-logo" src="./images/J&A PNG 1.png" alt="" draggable="false">
+                <div class="logo-rotator">
+                    <div class="ycircle">
+                        <div class="ylogo"></div>
+                        <div class="ytext">
+                            <p>- Jangid And Associates Academy -</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="choose-us-content">
+                    <span class="c-u-span">Why Choose Us</span>
+                    <h1>We Simplify Trading</h1>
+                    <p>We teach that anyone have zero knowledge about the stock market can become the sucessfull trader
+                        and make
+                        consistent profit from market.</p>
+
+                    <ul>
+                        <li>
+                            <img src="./images/time-left2.png" alt="" draggable="false">
+                            <div>
+                                <span>6-Month Support</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/webinar2.png" alt="" draggable="false">
+                            <div>
+                                <span>Live Webinar</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/virtual-class2.png" alt="" draggable="false">
+                            <div>
+                                <span>Revision Classes</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/trading2.png" alt="" draggable="false">
+                            <div>
+                                <span>Trading System</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/marketing2.png" alt="" draggable="false">
+                            <div>
+                                <span>Real Time Market Learning</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/chat5122.png" alt="" draggable="false">
+                            <div>
+                                <span>Real Time Discussion</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="" class="mybtn">
+                        <span><i class="fa fa-user-o"></i>Enroll Now</span>
+                        <span><i class="fa fa-user-o"></i>Enroll Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    /* ------------Why Choose Us-------------------- */
+    /* .choose-us{
+    background: #f5f7fa;
+} */
+    .choose-us .row {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .choose-us .col-lg-6 {
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .choose-us .col-lg-6 .logo-rotator {
+        display: none;
+    }
+
+    .choose-us .col-lg-6 .img-logo {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .choose-us .choose-us-content {
+        padding: 50px 0;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .choose-us .choose-us-content .c-u-span {
+        color: #ff2d3b;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .choose-us .choose-us-content h1 {
+        font-family: 'Nunito', sans-serif;
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .choose-us-content p {
+        font-size: 18px;
+        color: #606060;
+        margin-top: 20px;
+    }
+
+    .choose-us-content ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .choose-us-content ul li {
+        flex-basis: 50%;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        justify-content: left;
+        margin: 5px 0;
+    }
+
+    .choose-us-content ul li img {
+        /* background: #f0f3f0; */
+        background: repeating-radial-gradient(#fff, #f0f3f0);
+        padding: 4px;
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        margin-right: 5px;
+    }
+
+    .choose-us-content ul li span {
+        font-size: 18px;
+        font-weight: 600;
+        color: #606060;
+    }
+
+    .logo-rotator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: consolas;
+    }
+
+    .ycircle {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background: #ff2d3b;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ylogo {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: url(./images/youtube-logo.jpg);
+        background-size: cover;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        /* filter: brightness(1.2) contrast(1.2); */
+    }
+
+    .ytext {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        animation: rotateText 15s linear infinite;
+        color: #fff;
+    }
+
+    .ytext p {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    @keyframes rotateText {
+        0% {
+            transform: rotate(360deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    .ytext span {
+        position: absolute;
+        left: 50%;
+        font-size: 1.2em;
+        transform-origin: 0 100px;
+    }
+
+    @media only screen and (max-width:991px) {
+        .choose-us .container .row .col-lg-6 .img-logo {
+            /* padding: 50px; */
+            display: none;
+        }
+
+        .choose-us .col-lg-6 .logo-rotator {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .choose-us .choose-us-content {
+            text-align: center;
+        }
+
+        .choose-us-content ul li {
+            flex-basis: 50%;
+            display: block;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .choose-us .choose-us-content h1 {
+            font-size: 35px;
+        }
+    }
+</style>

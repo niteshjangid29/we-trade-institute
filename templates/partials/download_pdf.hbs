@@ -1,0 +1,260 @@
+<!-- -download pdf- -->
+<div class="download-pdf">
+    <div class="container">
+        <div class="row">
+            <div class="download-brochure">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <div class="content">
+                    <h2>Download Academy Brochure</h2>
+                    <p>Click on the below Button to Download Brochure.</p>
+                </div>
+                <div class="pdf">
+                    <a href="./images/J&A Academy Brochure.pdf" target="_blank" class="download_btn">
+                        <div class="completed">
+                            <i class="fa fa-check-circle"></i>
+                            <span>Completed</span>
+                        </div>
+                        <div class="download">
+                            <i class="fa fa-download"></i>
+                            <span>Download</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    /* -----------------download-pdf-------------------- */
+    .download-pdf {
+        padding: 50px 20px;
+        /* min-height: 340px; */
+    }
+
+    .download-pdf .container .row .download-brochure {
+        border: 4px solid rgb(165, 165, 165);
+        background: rgb(243, 243, 243);
+        border-radius: 20px;
+        padding: 30px 0;
+        position: relative;
+        text-align: center;
+        min-height: 280px;
+    }
+
+
+    .download-pdf .container .row .download-brochure .pdf {
+        font-family: 'Raleway', Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .download-pdf .container .row .download-brochure .content {
+        text-align: center;
+        position: relative;
+    }
+
+    .download-pdf .container .row .download-brochure .content h2 {
+        font-family: 'Nunito', sans-serif;
+    }
+
+    .download-pdf .container .row .download-brochure .content p {
+        color: #757575;
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+    .download_btn {
+        position: relative;
+        width: 200px;
+        height: 60px;
+        background: #ff2d3b;
+        color: #fff;
+        font-size: 23px;
+        font-weight: 700;
+        border-radius: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.8s;
+        transition-delay: 0.5s;
+        overflow: hidden;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .download_btn span,
+    .download_btn .fa {
+        color: #fff;
+        transition: 0.5s ease;
+    }
+
+    .download_btn span:hover {
+        letter-spacing: 1px;
+    }
+
+    .download_btn .fa {
+        margin-right: 8px;
+    }
+
+    .download_btn .download {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        transition: 0.3s;
+    }
+
+    .download_btn.active .download {
+        transform: translate(-50%, 60px);
+        animation: bottom_top 0.5s linear forwards;
+        animation-delay: 12s;
+    }
+
+    .download_btn .completed {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -60px);
+        white-space: nowrap;
+        color: #222;
+    }
+
+    .download_btn.active .completed {
+        animation: top_bottom 1.3s linear forwards;
+        animation-delay: 6.5s;
+    }
+
+    .download_btn.active {
+        width: 600px;
+        height: 15px;
+        animation: btn_width 4.5s linear forwards;
+        animation-delay: 5s;
+    }
+
+    .download_btn.active::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        /* background: #5c5cff; */
+        background: #000;
+        animation: before_active 10s linear forwards;
+        animation-delay: 1.5s;
+    }
+
+    .download_btn.active::after {
+        content: '\f00c';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-family: "Font Awesome 5 Free";
+        color: #fff;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 0.3s;
+        animation: check_scale 2s linear forwards;
+        animation-delay: 8.5s;
+    }
+
+    @keyframes before_active {
+        0% {
+            width: 0%;
+            height: 100%;
+        }
+
+        30%,
+        95% {
+            width: 100%;
+            height: 100%;
+        }
+
+        100% {
+            width: 100%;
+            height: 0%;
+        }
+    }
+
+    @keyframes btn_width {
+        0% {
+            width: 600px;
+            height: 15px;
+        }
+
+        20%,
+        70% {
+            width: 200px;
+            height: 60px;
+        }
+
+        80%,
+        90% {
+            width: 100px;
+            height: 100px;
+        }
+
+        100% {
+            width: 200px;
+            height: 60px;
+        }
+    }
+
+    @keyframes top_bottom {
+        0% {
+            transform: translate(-50%, -60px);
+        }
+
+        20%,
+        90% {
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        100% {
+            top: 120%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @keyframes bottom_top {
+        0% {
+            transform: translate(-50%, 60px);
+        }
+
+        100% {
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @keyframes check_scale {
+        0% {
+            transform: translate(-50%, -50%) scale(0);
+        }
+
+        20%,
+        90% {
+            transform: translate(-50%, -50%) scale(1.3);
+        }
+
+        100% {
+            transform: translate(-50%, 100px) scale(1.3);
+        }
+    }
+</style>
+
+
+<script>
+    const download_btn = document.querySelector('.download_btn')
+    download_btn.addEventListener('click', () => {
+        download_btn.classList.add('active')
+        setTimeout(() => {
+            download_btn.classList.remove('active')
+        }, 13000);
+    })
+
+</script>

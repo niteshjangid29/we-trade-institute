@@ -1,0 +1,439 @@
+<!-- Contact Details and Form-->
+<div class="contact-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact-content">
+                    <span>Contact Details</span>
+                    <h2>Get in Touch</h2>
+                    <p>Give Your details and we will contact you</p>
+                    <div class="c-c-1" onmouseover="IMGbgIn(0)" onmouseout="IMGbgOut(0)">
+                        <img src="./images/location.png" alt="" class="cc-img" draggable="false">
+                        <div class="c-c-1-1">
+                            <h3>Our Address</h3>
+                            <a href="" id="address">Amravati-444605, Maharashtra, INDIA</a>
+                        </div>
+                    </div>
+                    <div class="c-c-1" onmouseover="IMGbgIn(1)" onmouseout="IMGbgOut(1)">
+                        <img src="./images/email1.png" alt="" class="cc-img" draggable="false">
+                        <div class="c-c-1-1">
+                            <h3>Email</h3>
+                            <span>Mail:</span>
+                            <a href="mailto:supports@jangidandassociates.com">supports@jangidandassociates.com</a>
+                        </div>
+                    </div>
+                    <div class="c-c-1" onmouseover="IMGbgIn(2)" onmouseout="IMGbgOut(2)">
+                        <img src="./images/phone-call.png" alt="" class="cc-img" draggable="false">
+                        <div class="c-c-1-1">
+                            <h3>Contact</h3>
+                            <span>Mobile:</span>
+                            <a href="tel:+91-9680033244">+91-9680033244</a>
+                        </div>
+                    </div>
+                    <div class="c-c-1" onmouseover="IMGbgIn(3)" onmouseout="IMGbgOut(3)">
+                        <img src="./images/clock.png" alt="" class="cc-img" draggable="false">
+                        <div class="c-c-1-1">
+                            <h3>Contact Hours</h3>
+                            <span>Everyday: 08:00 AM - 10:00 PM IST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-body">
+                    <div class="form-container">
+                        <h2>Ready to Get Started?</h2>
+                        <p>Give Your details and we will contact you.</p>
+                        <form method="post" action="/contact">
+                            <div class="form-row">
+                                <div class="form-col">
+                                    <div class="inputBox">
+                                        <input type="text" name="name" required="required">
+                                        <span class="text">Your Name</span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                                <div class="form-col">
+                                    <div class="inputBox">
+                                        <input type="email" name="email" required="required">
+                                        <span class="text">Email</span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                                <div class="form-col">
+                                    <div class="inputBox">
+                                        <input type="tel" name="phone" required="required">
+                                        <span class="text">Phone</span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                                <div class="form-col">
+                                    <div class="inputBox">
+                                        <input type="text" name="city" required="required">
+                                        <span class="text">Your City</span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-col">
+                                    <div class="inputBox textarea">
+                                        <textarea name="message" id="" required="required"></textarea>
+                                        <span class="text">Type Your Message Here...</span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-col">
+                                    <input type="checkbox" name="check" id="check">
+                                    <label for="check">Accept <a href="">Terms</a> and <a href="">Privacy
+                                            Policy</a>.</label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-col">
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    .contact-details {
+        margin: 50px 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .contact-details .contact-content {
+        padding: 50px 0;
+    }
+
+    .contact-details .contact-content span {
+        color: #ff2d3b;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .contact-details .contact-content h2 {
+        font-family: 'Nunito', sans-serif;
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .contact-content p {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .contact-content .c-c-1 {
+        display: flex;
+        margin: 20px 0;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        border-radius: 10px;
+        /* border: 2px solid #fff; */
+    }
+
+    .contact-content .c-c-1:hover {
+        border: 2px solid red;
+        box-shadow: 0 4px 20px rgba(104, 104, 104, 0.1);
+        background: #fdf5f5;
+    }
+
+    .contact-content .c-c-1 img {
+        width: 75px;
+        height: 80px;
+        background: #f0f3f0;
+        padding: 20px 17px;
+        border-radius: 10px;
+        margin-right: 18px;
+        transition: 0.4s;
+    }
+
+    /* .contact-content .c-c-1 img:hover{
+    filter: brightness(0);
+    filter: invert(1);
+    background: #00d2c4;
+    cursor: pointer;
+} */
+    .img_hover {
+        filter: brightness(0);
+        filter: invert(1);
+        background: #00d2c4 !important;
+    }
+
+    .contact-content .c-c-1 .c-c-1-1 h3 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .contact-content .c-c-1 .c-c-1-1 span {
+        color: #606060;
+    }
+
+    .contact-content .c-c-1 .c-c-1-1 a {
+        color: #ff2d3b;
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    .contact-content .c-c-1 .c-c-1-1 a[id="address"] {
+        color: #606060;
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+
+    .contact-details .container .row .col-lg-6 .form-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* min-height: 100vh; */
+        /* background: #03080a; */
+        background: #ff2d3b;
+        border-radius: 7px;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 35px 30px;
+    }
+
+    .form-container h2 {
+        width: 100%;
+        /* color: #45f3ff; */
+        color: #fff;
+        font-size: 36px;
+        text-align: center;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    .form-container p {
+        width: 100%;
+        /* color: #45f3ff; */
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .form-container .form-row {
+        position: relative;
+        width: 100%;
+    }
+
+    .form-container .form-row .form-col {
+        position: relative;
+        width: 100%;
+        padding: 0 10px;
+        margin: 30px 0 10px;
+        transition: 0.5s;
+        display: flex;
+        align-items: center;
+    }
+
+    .form-container .form-row .inputBox {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        /* color: #45f3ff; */
+        color: #fff;
+    }
+
+    .form-container .form-row .inputBox input,
+    .form-container .form-row .inputBox.textarea textarea {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        padding: 0 10px;
+        z-index: 1;
+        color: #000;
+        font-weight: 600;
+    }
+
+    .form-container .form-row .inputBox .text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 40px;
+        font-size: 18px;
+        padding: 0 10px;
+        font-weight: 600;
+        display: block;
+        transition: 0.5s;
+        pointer-events: none;
+    }
+
+    .form-container .form-row .inputBox input:focus+.text,
+    .form-container .form-row .inputBox input:valid+.text {
+        top: -35px;
+        left: -10px;
+    }
+
+    .form-container .form-row .inputBox .line {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        /* background: #45f3ff; */
+        background: #fff;
+        transition: 0.5s;
+        border-radius: 2px;
+        pointer-events: none;
+    }
+
+    .form-container .form-row .inputBox input:focus~.line,
+    .form-container .form-row .inputBox input:valid~.line {
+        height: 100%;
+    }
+
+    .form-container .form-row .inputBox.textarea {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        padding: 10px 0;
+    }
+
+    .form-container .form-row .inputBox.textarea textarea {
+        height: 100%;
+        resize: none;
+    }
+
+    .form-container .form-row .inputBox textarea:focus+.text,
+    .form-container .form-row .inputBox textarea:valid+.text {
+        top: -35px;
+        left: -10px;
+    }
+
+    .form-container .form-row .inputBox textarea:focus~.line,
+    .form-container .form-row .inputBox textarea:valid~.line {
+        height: 100%;
+    }
+
+    .form-container input[type="submit"] {
+        border: none;
+        padding: 7px 35px;
+        cursor: pointer;
+        outline: none;
+        /* background: #45f3ff; */
+        background: #fff;
+        /* color: #000; */
+        color: #ff2d3b;
+        font-size: 18px;
+        border-radius: 4px;
+        font-family: 'Nunito', sans-serif;
+        transition: 0.5s;
+        border: 3.5px solid #fff;
+    }
+
+    .form-container input[type="submit"]:hover {
+        color: #fff;
+        background: #ff2d3b;
+        border: 3.5px solid #fff;
+    }
+
+    .form-container label {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .form-container label a {
+        color: #fff;
+        text-decoration: underline !important;
+    }
+
+    .form-container input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        height: 16px;
+        width: 16px;
+        background-color: #fff;
+        border-radius: 3px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        margin-right: 7px;
+        transition: 0.6s;
+        border: 2px solid #fff;
+    }
+
+    .form-container input[type="checkbox"]::after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f00c';
+        font-weight: 900;
+        font-size: 11px;
+        color: #fff;
+        display: none;
+    }
+
+    .form-container input[type="checkbox"]:hover {
+        background-color: #ff2d3b;
+        border: 2px solid #fff;
+    }
+
+    .form-container input[type="checkbox"]:checked {
+        background-color: #ff2d3b;
+        border: 2px solid #fff;
+    }
+
+    .form-container input[type="checkbox"]:checked::after {
+        display: block;
+    }
+
+    .contact-details img {
+        width: 40px;
+    }
+
+
+    @media only screen and (max-width:991px) {
+        .contact-details {
+            margin: 0 0 20px 0;
+        }
+
+        .contact-details .contact-content {
+            text-align: center;
+        }
+
+        .contact-details .contact-content .c-c-1 {
+            display: block;
+            text-align: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .contact-details .contact-content .c-c-1 img {
+            margin-right: 0;
+            margin-bottom: 5px;
+        }
+    }
+</style>
+
+<script>
+    cc1 = document.getElementsByClassName('cc-img');
+    function IMGbgIn(i) {
+        cc1[i].classList.add("img_hover");
+    }
+    function IMGbgOut(j) {
+        cc1[j].classList.remove("img_hover");
+    }
+</script>

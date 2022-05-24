@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headerLinks}}
+    <title>Admission Form - J&A Academy</title>
+</head>
+
+<body>
+    {{>navbar}}
+
+    <!-- -Admission Form- -->
+    <div class="admission-form">
+        <div class="container">
+            <div class="row">
+                <h1 class="admission-heading"><span>A</span>dmission <span>F</span>orm</h1>
+                <p>Please Fill out the below Form.</p>
+                <form class="row">
+                    <div class="col-md-6">
+                        <label for="VC1" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="VC1" placeholder="First Name">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="VC2" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="VC2" placeholder="Last Name">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="VC3" class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="VC3" placeholder="Phone">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="VC4" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="VC4" placeholder="Email">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="VC5" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="VC5" placeholder="Address">
+                    </div>
+                    <div class="col-12">
+                        <label for="VC6" class="form-label">Address 2</label>
+                        <input type="text" class="form-control" id="VC6" placeholder="Address">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="VC7" class="form-label">City</label>
+                        <input type="text" class="form-control" id="VC7" placeholder="Your City">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="VC8" class="form-label">State</label>
+                        <input type="text" class="form-control" id="VC8" placeholder="Your State">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="VC9" class="form-label">Postal / Zip Code</label>
+                        <input type="text" class="form-control" id="VC9" placeholder="Zip Code">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="VC10" class="form-label">Country</label>
+                        <input type="text" class="form-control" id="VC10" placeholder="Country">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="VC11" class="form-label">Profession</label>
+                        <div class="form-check">
+                            <input class="form-check-input" onclick="javascript:yesnoCheck();" type="radio"
+                                name="profession" id="yesCheck1">
+                            <label class="form-check-label" for="yesCheck1">
+                                Job
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" onclick="javascript:yesnoCheck();" type="radio"
+                                name="profession" id="yesCheck2">
+                            <label class="form-check-label" for="yesCheck2">
+                                Student
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" onclick="javascript:yesnoCheck();" type="radio"
+                                name="profession" id="yesCheck3">
+                            <label class="form-check-label" for="yesCheck3">
+                                Bussiness
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" onclick="javascript:yesnoCheck();" type="radio"
+                                name="profession" id="noCheck">
+                            <label class="form-check-label" for="noCheck">
+                                Others
+                            </label>
+                            <div id="ifYes" style="display: none;">
+                                <input type="text" class="form-control" placeholder="Please Specify">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="VC12" class="form-label">Salary (Income)</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="salary" id="S1">
+                            <label class="form-check-label" for="S1">
+                                Below 1,00,000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="salary" id="S2">
+                            <label class="form-check-label" for="S2">
+                                1,00,000 to 3,00,000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="salary" id="S3">
+                            <label class="form-check-label" for="S3">
+                                3,00,000 to 5,00,000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="salary" id="S4">
+                            <label class="form-check-label" for="S4">
+                                Above 5,00,000
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="VC12" class="form-label">Why do you want to Learn
+                            Trading?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="trading" id="LT1">
+                            <label class="form-check-label" for="LT1">
+                                To create Primary Income Source
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="trading" id="LT2">
+                            <label class="form-check-label" for="LT2">
+                                To create Secondary Income Source
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="trading" id="LT3">
+                            <label class="form-check-label" for="LT3">
+                                To acquire New Skills
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="VC12" class="form-label">Do you Trade?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="trade" id="T1">
+                            <label class="form-check-label" for="T1">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="trade" id="T2">
+                            <label class="form-check-label" for="T2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="VC12" class="form-label">What Demat Account do you
+                            Use?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="account" id="DA1">
+                            <label class="form-check-label" for="DA1">
+                                Zerodha
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="account" id="DA2">
+                            <label class="form-check-label" for="DA2">
+                                Upstock
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="account" id="DA3">
+                            <label class="form-check-label" for="DA3">
+                                Angel Broking
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="account" id="DA4">
+                            <label class="form-check-label" for="DA4">
+                                Kotak Securities
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="account" id="DA5">
+                            <label class="form-check-label" for="DA5">
+                                Alice Blue
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="account" id="DA6">
+                            <label class="form-check-label" for="DA6">
+                                ICICI Direct
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="VC12" class="form-label">As per your knowledge or
+                            expectations, how much return a trader can make in a
+                            year?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="return" id="R1">
+                            <label class="form-check-label" for="R1">
+                                0% to 10%
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="return" id="R2">
+                            <label class="form-check-label" for="R2">
+                                10% to 25%
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="return" id="R3">
+                            <label class="form-check-label" for="R3">
+                                25% to 50%
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="return" id="R4">
+                            <label class="form-check-label" for="R4">
+                                50% to 80%
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="return" id="R5">
+                            <label class="form-check-label" for="R5">
+                                80% to 100%
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="return" id="R6">
+                            <label class="form-check-label" for="R6">
+                                100% to 500%
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="return" id="R7">
+                            <label class="form-check-label" for="R7">
+                                500% & Above
+                            </label>
+                        </div>
+                    </div>
+                    <input type="submit" class="" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    {{>subscribe_page}}
+
+    {{>footer}}
+
+    <style>
+        /* -------------------Admission Form---------------- */
+        .admission-form .container .row {
+            margin: auto;
+            margin-top: 40px;
+            max-width: 900px;
+            /* text-align: center; */
+        }
+
+        .admission-form .container .row form {
+            margin: 0;
+            margin-top: 25px;
+            margin-bottom: 40px;
+        }
+
+        .admission-form .container .row h1 {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .admission-heading {
+            position: relative;
+            margin: 10px 0 20px 0;
+            line-height: 60px;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .admission-heading::after {
+            content: '';
+            background: #ff2d3b;
+            width: 35%;
+            height: 3.5px;
+            border-radius: 4px;
+            position: absolute;
+            bottom: -3px;
+            left: 18%;
+            transform: translateX(-50%);
+        }
+
+        .admission-form .container .row h1 span {
+            color: #ff2d3b;
+        }
+
+        .admission-form .container .row p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+        }
+
+        .admission-form .container .row .col-md-6 {
+            margin-bottom: 12px;
+        }
+
+        .admission-form .container .row .col-12 {
+            margin-bottom: 18px;
+        }
+
+        .admission-form label[class="form-check-label"] {
+            color: #504e4e;
+        }
+
+        .admission-form input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            height: 15px;
+            width: 15px;
+            background-color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            margin-right: 7px;
+            transition: 0.4s;
+            border: 1.5px solid rgb(139, 135, 135);
+        }
+
+        .admission-form input[type="radio"]::after {
+            font-family: "Font Awesome 5 Free";
+            content: "";
+            font-weight: 900;
+            font-size: 11px;
+            color: #fff;
+            display: none;
+        }
+
+        .admission-form input[type="radio"]:hover {
+            background-color: #fff;
+            border: 2px solid #ff2d3b;
+            outline-offset: 2px;
+            /*outline: 2.5px dotted #ff2d3b;*/
+            outline: 2px solid #ff2d3b;
+        }
+
+        .admission-form input[type="radio"]:checked {
+            background-color: #ff2d3b;
+            border: 1px solid #ff2d3b;
+        }
+
+        .admission-form input[type="radio"]:checked::after {
+            display: block;
+        }
+
+        .admission-form input[type="submit"] {
+            border: none;
+            padding: 3px 35px;
+            cursor: pointer;
+            outline: none;
+            background: #ff2d3b;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 4px;
+            font-family: 'Nunito', sans-serif;
+            transition: 0.5s;
+            border: 3.5px solid #ff2d3b;
+        }
+
+        .admission-form input[type="submit"]:hover {
+            color: #ff2d3b;
+            background: #fff;
+            border: 3.5px solid #ff2d3b;
+        }
+
+
+        @media only screen and (max-width:768px) {
+            .admission-heading::after {
+                width: 45%;
+                height: 3.5px;
+                border-radius: 4px;
+                position: absolute;
+                bottom: -1px;
+                left: 25%;
+            }
+        }
+
+        @media only screen and (max-width:500px) {
+            .admission-heading::after {
+                width: 50%;
+                height: 3.5px;
+                border-radius: 4px;
+                position: absolute;
+                bottom: -1px;
+                left: 30%;
+            }
+        }
+
+        @media only screen and (max-width:420px) {
+            .admission-heading::after {
+                width: 60%;
+                height: 3.5px;
+                border-radius: 4px;
+                position: absolute;
+                bottom: -1px;
+                left: 35%;
+            }
+        }
+    </style>
+
+    <script>
+        function yesnoCheck() {
+            if (document.getElementById('yesCheck1').checked) {
+                document.getElementById('ifYes').style.display = "none";
+            }
+            else if (document.getElementById('yesCheck2').checked) {
+                document.getElementById('ifYes').style.display = "none";
+            }
+            else if (document.getElementById('yesCheck3').checked) {
+                document.getElementById('ifYes').style.display = "none";
+            }
+            else {
+                document.getElementById('ifYes').style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

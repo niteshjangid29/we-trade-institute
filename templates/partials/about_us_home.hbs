@@ -1,0 +1,205 @@
+<!-- About US-Home  -->
+<div class="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-us-content">
+                    <span class="a-u-span">About Us</span>
+                    <h1>Welcome to Jangid and Associates Academy</h1>
+                    <p class="para-1">Jangid And Associates Academy is an renowned share market institute located in
+                        Amravati
+                        Maharashtra. J&A Academy is an educational institute engaged in providing knowledge on stock
+                        market trad
+                        ing covering both equity cash and derivatives market.</p>
+
+                    <p class="para-2">We aim to provide the best education to educate people how to approach stock
+                        market
+                        trading using Technical Analysis in combination with Advanced strategies designed.</p>
+
+                    <a href="" class="mybtn">
+                        <span><i class="fa fa-user-o"></i>Know More</span>
+                        <span><i class="fa fa-user-o"></i>Know More</span>
+                    </a>
+                </div>
+            </div>
+            {{!-- <div class="col-lg-6">
+                <div class="form-body">
+                    <div class="form-container">
+                        <h2>Ready to Get Started?</h2>
+                        <p>Give Your details and we will contact you.</p>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="inputBox">
+                                    <input type="text" required="required">
+                                    <span class="text">Your Name</span>
+                                    <span class="line"></span>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="inputBox">
+                                    <input type="email" required="required">
+                                    <span class="text">Email</span>
+                                    <span class="line"></span>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="inputBox">
+                                    <input type="tel" required="required">
+                                    <span class="text">Phone</span>
+                                    <span class="line"></span>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="inputBox">
+                                    <input type="text" required="required">
+                                    <span class="text">Your City</span>
+                                    <span class="line"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="inputBox textarea">
+                                    <textarea name="" id="" required="required"></textarea>
+                                    <span class="text">Type Your Message Here...</span>
+                                    <span class="line"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <input type="checkbox" name="" id="check">
+                                <label for="check">Accept <a href="">Terms</a> and <a href="">Privacy
+                                        Policy</a>.</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+        </div>
+    </div>
+</div>
+
+
+<style>
+    /* ------------About US-------Home ---------------- */
+    .about-us {
+        margin-top: 50px;
+    }
+
+    .about-us .col-lg-6 {
+        padding: 50px;
+    }
+
+    .about-us .about-us-content {
+        max-width: 500px;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .about-us .about-us-content .a-u-span {
+        color: #ff2d3b;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .about-us .about-us-content h1 {
+        font-family: 'Nunito', sans-serif;
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .about-us-content .para-1 {
+        font-size: 18px;
+        color: #606060;
+        margin-top: 20px;
+    }
+
+    .about-us-content .para-2 {
+        font-size: 18px;
+        margin-top: 20px;
+        font-weight: 600;
+        color: #606060;
+    }
+
+    .mybtn {
+        position: relative;
+        display: inline-block;
+        justify-self: right;
+        width: 180px;
+        height: 48px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+        margin-top: 20px;
+    }
+
+    .mybtn span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        background: #ff2d3b;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 7px;
+    }
+
+    .mybtn span:hover {
+        letter-spacing: 1.2px;
+    }
+
+    .mybtn span .fa {
+        color: #fff;
+        font-weight: 600;
+        margin-right: 5px;
+        font-size: 18px;
+    }
+
+    .mybtn span:nth-child(2) {
+        color: #fff;
+        background: #000;
+        z-index: 2;
+        transition: 0.6s;
+        clip-path: polygon(55% 0, 100% 0%, 100% 100%, 55% 100%, 45% 53%);
+    }
+
+    .mybtn span:nth-child(2):hover {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 50%);
+    }
+
+    .mybtn span:nth-child(1):hover+span:nth-child(2) {
+        clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%, 100% 50%);
+    }
+
+    /*.form-body{
+        background:#ff2d3b;
+    }*/
+
+
+    @media only screen and (max-width:991px) {
+        .about-us .about-us-content {
+            text-align: center;
+            margin: auto;
+        }
+        .about-us .about-us-content h1 {
+            font-size: 30px;
+        }
+        .about-us .col-lg-6 {
+            padding: 20px;
+        }        
+    }
+</style>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headerLinks}}
+    <title>Contact Us - J&A Academy</title>
+</head>
+
+<body>
+    {{>navbar}}
+
+    <div class="contact-us">
+        <div class="container">
+            <div class="row">
+                <h1 class="contact-heading"><span>C</span>ontact <span>U</span>s</h1>
+            </div>
+        </div>
+    </div>
+
+    {{>contact_details}}
+
+    <!-- -Address-Map- -->
+    <div class="Google-Map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1633714.1112350377!2d77.62223143716704!3d21.351371124076604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sP-51%20%2C%20Amba%20Colony%20%20Near%20Akoli%20Road%20%2C%20Telicom%20colony%20%2CAmravati-444605%20%2C%20Maharashtra%20%2C%20INDIA!5e0!3m2!1sen!2sin!4v1637052116182!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    {{>subscribe_page}}
+
+    {{>footer}}
+
+    <style>
+        .contact-us {
+            margin-top: 30px;
+            margin-bottom: -50px;
+        }
+
+        .contact-us .container .row {
+            text-align: center;
+        }
+
+        .contact-us .container .row h1 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 50px;
+            color: #000;
+            margin-bottom: 50px;
+        }
+
+        .contact-us .container .row h1 span {
+            color: #ff2d3b;
+        }
+
+        .contact-heading {
+            position: relative;
+            margin: 10px 0 20px 0;
+            line-height: 60px;
+            font-weight: 600;
+            color: #ff2d3b;
+        }
+
+        .contact-heading::after {
+            content: '';
+            background: #ff2d3b;
+            width: 20%;
+            height: 3.5px;
+            border-radius: 4px;
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* -----------Address----------Map------  */
+        .Google-Map {
+            width: 100%;
+            border: 2px solid #fff;
+        }
+
+        .Google-Map iframe {
+            width: 100%;
+            height: 60vh;
+        }
+
+        @media only screen and (max-width: 748px) {
+            .Google-Map iframe {
+                height: 50vh;
+            }
+        }
+    </style>
+</body>
+
+</html>
