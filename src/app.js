@@ -83,9 +83,9 @@ app.get('/upcoming-events', (req, res) => {
     res.render('upcoming-events');
 })
 
-// app.get('/weather', (req, res) => {
-//     res.render('weather');
-// })
+app.get('/weather', (req, res) => {
+    res.render('weather');
+})
 
 app.get('*', (req, res) => {
     res.render('404error', {
