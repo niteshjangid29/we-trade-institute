@@ -1,0 +1,9 @@
+{
+    "Customer": {
+        "dbConfig":{
+            "host": "localhost",
+            "port": 5984,
+            "dbName": "mongodb+srv://vikash:Vikash123@cluster0.eq42b.mongodb.net/Database1?retryWrites=true&w=majority"
+        }
+    }
+}

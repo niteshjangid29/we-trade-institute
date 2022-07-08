@@ -2,31 +2,20 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 const app = express();
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
+require("./db/conn");
+const Contact = require('./models/contactForm');
 
 //  public static path
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
 const partials_path = path.join(__dirname, "../templates/partials");
 
-main().catch(err => console.log(err));
-async function main() {
-    await mongoose.connect('mongodb://localhost:27017/J&A_Academy');
-}
+// for mongodb connection
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
-const contactSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    phone: Number,
-    city: String,
-    message: String,
-    check: Boolean
-}, { versionKey: false });
-
-const Contact = mongoose.model('Contact', contactSchema);
-// app.use(express.urlencoded());
 app.set('view engine', 'hbs');
 app.set('views', template_path);
 hbs.registerPartials(partials_path);
@@ -93,13 +82,29 @@ app.get('*', (req, res) => {
     });
 })
 
-app.post('/contact', (req, res) => {
-    let myData = new Contact(req.body);
-    myData.save().then(() => {
-        res.send("This item has been saved to the database")
-    }).catch(() => {
-        res.status(400).send("Item was not saved to the database")
-    })
+app.post('/', async (req, res) => {
+    try{
+        // console.log(req.body.name)
+        // res.send(req.body.name);
+        const contactData = new Contact({
+            name: req.body.name,
+            email: req.body.email,
+            phone: req.body.phone,
+            city: req.body.city,
+            message: req.body.message,
+        })
+        const contacted = await contactData.save();
+        res.status(201).render("index");
+
+    } catch(error) {
+        res.status(400).send(error);
+    }
+    // let myData = new Contact(req.body);
+    // myData.save().then(() => {
+    //     res.send("This item has been saved to the database")
+    // }).catch(() => {
+    //     res.status(400).send("Item was not saved to the database")
+    // })
 })
 
 app.listen(port, () => {
@@ -115,24 +120,21 @@ app.listen(port, () => {
 
 
 
-const userSchema = new mongoose.Schema({
-    username: String,
-    password: Number
-}, {
-    versionKey: false //here
-});
-
-const userModel = mongoose.model('userModel', userSchema);
+// const userSchema = new mongoose.Schema({
+//     username: String,
+//     password: Number
+// }, {
+//     versionKey: false //here
+// });
 
 
+// app.post("/about-us", (req, res) => {
 
-app.post("/about-us", (req, res) => {
+//     let newUser = new userModel(req.body);
+//     newUser.save().then(() => {
+//         console.log("login data stored successfully.")
+//     }).catch(() => {
+//         console.log("login data not stored.")
+//     });
 
-    let newUser = new userModel(req.body);
-    newUser.save().then(() => {
-        console.log("login data stored successfully.")
-    }).catch(() => {
-        console.log("login data not stored.")
-    });
-
-});
+// });
