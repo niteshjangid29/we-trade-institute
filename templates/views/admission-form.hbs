@@ -15,107 +15,107 @@
             <div class="row">
                 <h1 class="admission-heading"><span>A</span>dmission <span>F</span>orm</h1>
                 <p>Please Fill out the below Form.</p>
-                <form class="row">
+                <form method="POST" action="/admission" class="row">
                     <div class="col-md-6">
-                        <label for="VC1" class="form-label">First name</label>
-                        <input type="text" class="form-control" id="VC1" placeholder="First Name">
+                        <label for="VC1" class="form-label">First name*</label>
+                        <input type="text" class="form-control" name="firstname" id="VC1" placeholder="First Name" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="VC2" class="form-label">Last name</label>
-                        <input type="text" class="form-control" id="VC2" placeholder="Last Name">
+                        <label for="VC2" class="form-label">Last name*</label>
+                        <input type="text" class="form-control" name="lastname" id="VC2" placeholder="Last Name" required>
                     </div>
 
                     <div class="col-md-6">
-                        <label for="VC3" class="form-label">Phone</label>
-                        <input type="tel" class="form-control" id="VC3" placeholder="Phone">
+                        <label for="VC3" class="form-label">Phone*</label>
+                        <input type="tel" class="form-control" name="phone" id="VC3" placeholder="Phone" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="VC4" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="VC4" placeholder="Email">
+                        <label for="VC4" class="form-label">Email*</label>
+                        <input type="email" class="form-control" name="email" id="VC4" placeholder="Email" required>
                     </div>
 
                     <div class="col-12">
-                        <label for="VC5" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="VC5" placeholder="Address">
+                        <label for="VC5" class="form-label">Address*</label>
+                        <input type="text" class="form-control" name="address1" id="VC5" placeholder="Address" required>
                     </div>
                     <div class="col-12">
                         <label for="VC6" class="form-label">Address 2</label>
-                        <input type="text" class="form-control" id="VC6" placeholder="Address">
+                        <input type="text" class="form-control" name="address2" id="VC6" placeholder="Address">
                     </div>
                     <div class="col-md-6">
-                        <label for="VC7" class="form-label">City</label>
-                        <input type="text" class="form-control" id="VC7" placeholder="Your City">
+                        <label for="VC7" class="form-label">City*</label>
+                        <input type="text" class="form-control" name="city" id="VC7" placeholder="Your City" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="VC8" class="form-label">State</label>
-                        <input type="text" class="form-control" id="VC8" placeholder="Your State">
+                        <label for="VC8" class="form-label">State*</label>
+                        <input type="text" class="form-control" name="state" id="VC8" placeholder="Your State" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="VC9" class="form-label">Postal / Zip Code</label>
-                        <input type="text" class="form-control" id="VC9" placeholder="Zip Code">
+                        <label for="VC9" class="form-label">Postal / Zip Code*</label>
+                        <input type="text" class="form-control" name="zipcode" id="VC9" placeholder="Zip Code" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="VC10" class="form-label">Country</label>
-                        <input type="text" class="form-control" id="VC10" placeholder="Country">
+                        <label for="VC10" class="form-label">Country*</label>
+                        <input type="text" class="form-control" name="country" id="VC10" placeholder="Country" required>
                     </div>
 
                     <div class="col-12">
-                        <label for="VC11" class="form-label">Profession</label>
+                        <label for="VC11" class="form-label">Profession*</label>
                         <div class="form-check">
-                            <input class="form-check-input" onclick="javascript:yesnoCheck();" type="radio"
-                                name="profession" id="yesCheck1">
+                            <input class="form-check-input" onclick="javascript:yesnoCheck();" type="radio" value="Job"
+                                name="profession" id="yesCheck1" required>
                             <label class="form-check-label" for="yesCheck1">
                                 Job
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" onclick="javascript:yesnoCheck();" type="radio"
-                                name="profession" id="yesCheck2">
+                            <input class="form-check-input" onclick="javascript:yesnoCheck();" type="radio" value="Student"
+                                name="profession" id="yesCheck2" required>
                             <label class="form-check-label" for="yesCheck2">
                                 Student
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" onclick="javascript:yesnoCheck();" type="radio"
-                                name="profession" id="yesCheck3">
+                            <input class="form-check-input" onclick="javascript:yesnoCheck();" type="radio" value="Bussiness"
+                                name="profession" id="yesCheck3" required>
                             <label class="form-check-label" for="yesCheck3">
                                 Bussiness
                             </label>
                         </div>
-                        <div class="form-check">
+                        {{!-- <div class="form-check">
                             <input class="form-check-input" onclick="javascript:yesnoCheck();" type="radio"
-                                name="profession" id="noCheck">
+                                name="profession" id="noCheck" >
                             <label class="form-check-label" for="noCheck">
                                 Others
                             </label>
                             <div id="ifYes" style="display: none;">
-                                <input type="text" class="form-control" placeholder="Please Specify">
+                                <input type="text" class="form-control" name="profession" placeholder="Please Specify" >
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
 
                     <div class="col-12">
-                        <label for="VC12" class="form-label">Salary (Income)</label>
+                        <label for="VC12" class="form-label">Salary (Income)*</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="salary" id="S1">
+                            <input class="form-check-input" type="radio" name="salary" id="S1" value="Below 1,00,000" required>
                             <label class="form-check-label" for="S1">
                                 Below 1,00,000
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="salary" id="S2">
+                            <input class="form-check-input" type="radio" name="salary" id="S2" value="1,00,000 to 3,00,000" required>
                             <label class="form-check-label" for="S2">
                                 1,00,000 to 3,00,000
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="salary" id="S3">
+                            <input class="form-check-input" type="radio" name="salary" id="S3" value="3,00,000 to 5,00,000" required>
                             <label class="form-check-label" for="S3">
                                 3,00,000 to 5,00,000
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="salary" id="S4">
+                            <input class="form-check-input" type="radio" name="salary" id="S4" value="Above 5,00,000" required>
                             <label class="form-check-label" for="S4">
                                 Above 5,00,000
                             </label>
@@ -124,21 +124,21 @@
 
                     <div class="col-12">
                         <label for="VC12" class="form-label">Why do you want to Learn
-                            Trading?</label>
+                            Trading?*</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="trading" id="LT1">
+                            <input class="form-check-input" type="radio" name="whyTrading" id="LT1" value="To create Primary Income Source" required>
                             <label class="form-check-label" for="LT1">
                                 To create Primary Income Source
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="trading" id="LT2">
+                            <input class="form-check-input" type="radio" name="whyTrading" id="LT2" value="To create Secondary Income Source" required>
                             <label class="form-check-label" for="LT2">
                                 To create Secondary Income Source
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="trading" id="LT3">
+                            <input class="form-check-input" type="radio" name="whyTrading" id="LT3" value="To acquire New Skills" required>
                             <label class="form-check-label" for="LT3">
                                 To acquire New Skills
                             </label>
@@ -146,15 +146,15 @@
                     </div>
 
                     <div class="col-12">
-                        <label for="VC12" class="form-label">Do you Trade?</label>
+                        <label for="VC12" class="form-label">Do you Trade?*</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="trade" id="T1">
+                            <input class="form-check-input" type="radio" name="trade" id="T1" value="Yes" required>
                             <label class="form-check-label" for="T1">
                                 Yes
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="trade" id="T2">
+                            <input class="form-check-input" type="radio" name="trade" id="T2" value="No" required>
                             <label class="form-check-label" for="T2">
                                 No
                             </label>
@@ -163,39 +163,39 @@
 
                     <div class="col-12">
                         <label for="VC12" class="form-label">What Demat Account do you
-                            Use?</label>
+                            Use?*</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="account" id="DA1">
+                            <input class="form-check-input" type="radio" name="demateAccount" id="DA1" value="Zerodha" required>
                             <label class="form-check-label" for="DA1">
                                 Zerodha
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="account" id="DA2">
+                            <input class="form-check-input" type="radio" name="demateAccount" id="DA2" value="Upstock" required>
                             <label class="form-check-label" for="DA2">
                                 Upstock
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="account" id="DA3">
+                            <input class="form-check-input" type="radio" name="demateAccount" id="DA3" value="Angel Broking" required>
                             <label class="form-check-label" for="DA3">
                                 Angel Broking
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="account" id="DA4">
+                            <input class="form-check-input" type="radio" name="demateAccount" id="DA4" value="Kotak Securities" required>
                             <label class="form-check-label" for="DA4">
                                 Kotak Securities
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="account" id="DA5">
+                            <input class="form-check-input" type="radio" name="demateAccount" id="DA5" value="Alice Blue" required>
                             <label class="form-check-label" for="DA5">
                                 Alice Blue
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="account" id="DA6">
+                            <input class="form-check-input" type="radio" name="demateAccount" id="DA6" value="ICICI Direct" required>
                             <label class="form-check-label" for="DA6">
                                 ICICI Direct
                             </label>
@@ -205,45 +205,45 @@
                     <div class="col-12">
                         <label for="VC12" class="form-label">As per your knowledge or
                             expectations, how much return a trader can make in a
-                            year?</label>
+                            year?*</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="return" id="R1">
+                            <input class="form-check-input" type="radio" name="returnInYear" id="R1" value="0% to 10%" required>
                             <label class="form-check-label" for="R1">
                                 0% to 10%
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="return" id="R2">
+                            <input class="form-check-input" type="radio" name="returnInYear" id="R2" value="10% to 25%" required>
                             <label class="form-check-label" for="R2">
                                 10% to 25%
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="return" id="R3">
+                            <input class="form-check-input" type="radio" name="returnInYear" id="R3" value="25% to 50%" required>
                             <label class="form-check-label" for="R3">
                                 25% to 50%
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="return" id="R4">
+                            <input class="form-check-input" type="radio" name="returnInYear" id="R4" value="50% to 80%" required>
                             <label class="form-check-label" for="R4">
                                 50% to 80%
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="return" id="R5">
+                            <input class="form-check-input" type="radio" name="returnInYear" id="R5" value="80% to 100%" required>
                             <label class="form-check-label" for="R5">
                                 80% to 100%
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="return" id="R6">
+                            <input class="form-check-input" type="radio" name="returnInYear" id="R6" value="100% to 500%" required>
                             <label class="form-check-label" for="R6">
                                 100% to 500%
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="return" id="R7">
+                            <input class="form-check-input" type="radio" name="returnInYear" id="R7" value="500% & Above" required>
                             <label class="form-check-label" for="R7">
                                 500% & Above
                             </label>
@@ -435,6 +435,11 @@
             else {
                 document.getElementById('ifYes').style.display = "block";
             }
+        }
+
+
+        if(window.history.replaceState){
+            window.history.replaceState(null, null, window.location.href);
         }
     </script>
 </body>

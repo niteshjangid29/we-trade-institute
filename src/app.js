@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
 require("./db/conn");
 const Contact = require('./models/contactForm');
+const Admission = require('./models/admissionForm');
 
 //  public static path
 const static_path = path.join(__dirname, "../public");
@@ -40,7 +41,7 @@ app.get('/contact', (req, res) => {
     res.render('contact-us');
 })
 
-app.get('/admission-form', (req, res) => {
+app.get('/admission', (req, res) => {
     res.render('admission-form');
 })
 
@@ -82,7 +83,7 @@ app.get('*', (req, res) => {
     });
 })
 
-app.post('/', async (req, res) => {
+app.post('/contact', async (req, res) => {
     try{
         // console.log(req.body.name)
         // res.send(req.body.name);
@@ -99,12 +100,36 @@ app.post('/', async (req, res) => {
     } catch(error) {
         res.status(400).send(error);
     }
-    // let myData = new Contact(req.body);
-    // myData.save().then(() => {
-    //     res.send("This item has been saved to the database")
-    // }).catch(() => {
-    //     res.status(400).send("Item was not saved to the database")
-    // })
+})
+
+app.post('/admission', async (req, res) => {
+    try{
+        // console.log(req.body.name)
+        // res.send(req.body.name);
+        const admissionData = new Admission({
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            phone: req.body.phone,
+            email: req.body.email,
+            address1: req.body.address1,
+            address2: req.body.address2,
+            city: req.body.city,
+            state: req.body.state,
+            zipcode: req.body.zipcode,
+            country: req.body.country,
+            profession: req.body.profession,
+            salary: req.body.salary,
+            whyTrading: req.body.whyTrading,
+            trade: req.body.trade,
+            demateAccount: req.body.demateAccount,
+            returnInYear: req.body.returnInYear,
+        })
+        const admissioned = await admissionData.save();
+        res.status(201).render("index");
+
+    } catch(error) {
+        res.status(400).send(error);
+    }
 })
 
 app.listen(port, () => {
