@@ -9,7 +9,7 @@
         
         <form action="/" method="POST">
           <div class="sub-email">
-            <input type="email" name="email" placeholder="Enter your Email Address">
+            <input type="email" name="email" id="subB" placeholder="Enter your Email Address">
             <div>
               <input type="submit" id="subBtn" value="Subscribe">
             </div>
@@ -57,7 +57,8 @@
   }
 
   /*-------------subscribe-btn--------------*/
-  .sub-email input[type="email"]{
+  {{!-- .sub-email input{ --}}
+  .sub-email #subB{
     background: #eaeaea;
     width: 450px;
     height: 50px;
@@ -181,14 +182,14 @@
       border-radius: 7px;
     }
 
-    .sub-email input {
+    .sub-email #subB {
       border-radius: 7px;
       margin-bottom: 15px;
     }
   }
 
   @media only screen and (max-width:500px) {
-    .sub-email input {
+    .sub-email #subB {
       width: 100%;
     }
 
