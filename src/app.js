@@ -119,8 +119,6 @@ app.post('/contact', async (req, res) => {
 
 app.post('/admission', async (req, res) => {
     try{
-        // console.log(req.body.name)
-        // res.send(req.body.name);
         const admissionData = new Admission({
             firstname: req.body.firstname,
             lastname: req.body.lastname,
@@ -140,7 +138,7 @@ app.post('/admission', async (req, res) => {
             returnInYear: req.body.returnInYear,
         })
         const admissioned = await admissionData.save();
-        res.status(201).render("admission");
+        res.status(201).render("admission-form");
 
     } catch(error) {
         res.status(400).send(error);
