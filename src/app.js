@@ -7,6 +7,7 @@ const port = process.env.PORT || 3000;
 require("./db/conn");
 const Contact = require('./models/contactForm');
 const Admission = require('./models/admissionForm');
+const Subscribe = require('./models/subscribeForm');
 
 //  public static path
 const static_path = path.join(__dirname, "../public");
@@ -73,14 +74,28 @@ app.get('/upcoming-events', (req, res) => {
     res.render('upcoming-events');
 })
 
-app.get('/weather', (req, res) => {
-    res.render('weather');
-})
+// app.get('/weather', (req, res) => {
+//     res.render('weather');
+// })
 
 app.get('*', (req, res) => {
     res.render('404error', {
         errorMsg: 'OOPS! Page Not Found'
     });
+})
+
+app.post('/', async (req, res) => {
+    try{
+        const subscribeData = new Subscribe({
+            email: req.body.email,
+        })
+
+        const subscribed = await subscribeData.save();
+        res.status(201).render("index");
+    } catch(error) {
+        // res.status(400).send(error);
+        res.status(201).render("index");
+    }
 })
 
 app.post('/contact', async (req, res) => {
@@ -125,7 +140,7 @@ app.post('/admission', async (req, res) => {
             returnInYear: req.body.returnInYear,
         })
         const admissioned = await admissionData.save();
-        res.status(201).render("index");
+        res.status(201).render("admission");
 
     } catch(error) {
         res.status(400).send(error);

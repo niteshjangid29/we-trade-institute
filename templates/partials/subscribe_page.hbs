@@ -7,13 +7,16 @@
         <p>For information on regular updates, batch launches, important announcements, and specials classes, please
           subscribe to our site.</p>
         
-        <form action="">
+        <form action="/" method="POST">
           <div class="sub-email">
-            <input type="email" placeholder="Enter your Email Address">
-            <a href="#">
+            <input type="email" name="email" placeholder="Enter your Email Address">
+            <div>
+              <input type="submit" id="subBtn" value="Subscribe">
+            </div>
+            {{!-- <a href="#">
               <span><i class="fa fa-user-o"></i>Subscribe</span>
               <span><i class="fa fa-user-o"></i>Subscribe</span>
-            </a>
+            </a> --}}
           </div>
         </form>
       </div>
@@ -54,7 +57,7 @@
   }
 
   /*-------------subscribe-btn--------------*/
-  .sub-email input {
+  .sub-email input[type="email"]{
     background: #eaeaea;
     width: 450px;
     height: 50px;
@@ -75,7 +78,39 @@
     max-width: 650px;
   }
 
-  .sub-email a {
+  {{!-- ///////////////////// --}}
+  .sub-email div{
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  }
+  .sub-email #subBtn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    font-family: 'Nunito', sans-serif !important;
+    background: #ff2d3b;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  .sub-email #subBtn:hover{
+    letter-spacing: 2px;
+  }
+
+  .sub-email a{
     position: relative;
     display: inline-block;
     width: 150px;
@@ -142,6 +177,9 @@
     .sub-email a span {
       border-radius: 7px;
     }
+    .sub-email #subBtn{
+      border-radius: 7px;
+    }
 
     .sub-email input {
       border-radius: 7px;
@@ -163,3 +201,10 @@
     }
   }
 </style>
+
+
+<script>
+  if(window.history.replaceState){
+    window.history.replaceState(null, null, window.location.href);
+  }
+</script>
